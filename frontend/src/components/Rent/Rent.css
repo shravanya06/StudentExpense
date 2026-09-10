@@ -1,0 +1,230 @@
+.rent-page {
+  min-height: 100vh;
+  color-scheme: light;
+  padding: 40px;
+  background: #f5f7fb;
+  color: #1f2937;
+  box-sizing: border-box;
+}
+
+.rent-header {
+  margin-bottom: 30px;
+}
+
+.rent-header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #1f2937;
+}
+
+.rent-header p {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+/* Summary Cards */
+
+.rent-summary {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.rent-summary-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  width: 220px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.rent-summary-card p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.rent-summary-card h2 {
+  margin-top: 10px;
+  font-size: 26px;
+  color: #1f2937;
+}
+
+/* Main Card */
+
+.rent-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.rent-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+/* Form */
+
+.rent-card form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.rent-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rent-form-group label {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.rent-form-group input,
+.rent-form-group select {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #1f2937;
+  background: white;
+  box-sizing: border-box;
+}
+
+.rent-form-group input:focus,
+.rent-form-group select:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* Save Button */
+
+.save-rent-btn {
+  grid-column: span 2;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-rent-btn:hover {
+  background: #4338ca;
+}
+
+/* Table */
+
+.rent-table {
+  width: 100%;
+}
+
+.rent-table-header,
+.rent-table-row {
+  display: grid;
+  grid-template-columns:
+    1.2fr
+    1fr
+    1.2fr
+    1.2fr
+    1fr
+    0.8fr;
+
+  align-items: center;
+  gap: 15px;
+  padding: 15px 10px;
+}
+
+.rent-table-header {
+  font-weight: 700;
+  color: #1f2937;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.rent-table-row {
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Status */
+
+.paid-badge {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.pending-badge {
+  background: #fef3c7;
+  color: #b45309;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* Delete */
+
+.rent-delete-btn {
+  border: none;
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 7px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.rent-delete-btn:hover {
+  background: #fecaca;
+}
+
+/* Total */
+
+.rent-total {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .rent-page {
+    padding: 20px;
+  }
+
+  .rent-summary {
+    flex-direction: column;
+  }
+
+  .rent-summary-card {
+    width: auto;
+  }
+
+  .rent-card form {
+    grid-template-columns: 1fr;
+  }
+
+  .save-rent-btn {
+    grid-column: span 1;
+  }
+
+  .rent-table {
+    overflow-x: auto;
+  }
+
+  .rent-table-header,
+  .rent-table-row {
+    min-width: 900px;
+  }
+}
