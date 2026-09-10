@@ -6,4 +6,8 @@ export const startingTransactions = [
   { id: 5, category: 'shopping', title: 'Grocery run', note: 'Sep 03, 1:15 PM', amount: -67.8, type: 'expense' },
 ]
 
-export const formatMoney = (value) => `$${Math.abs(value).toFixed(2)}`
+export const formatMoney = (value) => new Intl.NumberFormat('en-IN', {
+  style: 'currency',
+  currency: 'INR',
+  minimumFractionDigits: 2,
+}).format(Math.abs(value))
